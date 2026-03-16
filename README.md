@@ -2,10 +2,6 @@
 
 This repository serves as a comprehensive workspace for implementing, training, and experimenting with various Deep Learning architectures from scratch. The goal is to deeply understand the mechanics of state-of-the-art neural networks through hands-on implementation and fine-tuning.
 
-## 🚀 Overview
-
-The projects in this repository cover a wide spectrum of Deep Learning concepts, ranging from fundamental foundations to advanced architectures in Computer Vision and Natural Language Processing.
-
 ## 🛠️ Tech Stack
 
 - **Framework**: [PyTorch](https://pytorch.org/) and maybe [TensorFlow](https://www.tensorflow.org/) later
