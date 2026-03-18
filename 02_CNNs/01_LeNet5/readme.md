@@ -14,4 +14,4 @@ The implementation in `LeNet5.ipynb` is a **modernized version** of the original
 | **Subsampling** | Trainable weights/biases after average pooling. | **Fixed Average Pooling** (`nn.AvgPool2d`). |
 | **Activations** | Scaled Tanh: $1.7159 \cdot \tanh(\frac{2}{3}a)$. | Standard `nn.Tanh()`. |
 | **Output Layer** | Radial Basis Function (RBF) units. | **Linear Layer** with Softmax/CrossEntropy. |
-| **Training** | Complex second-order optimization. | **SGD (Stochastic Gradient Descent)**. |
+| **Training** | Complex second-order optimization. | **SGD (Stochastic Gradient Descent)**. | 
