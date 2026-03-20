@@ -7,7 +7,7 @@ AlexNet was the breakthrough architecture that won the ImageNet challenge in 201
 - **Inefficiency**: Modern architectures like ResNet (using skip connections) or EfficientNet achieve better performance with fewer parameters and lower compute costs.
 - **Historical Techniques**: It relies on Local Response Normalization (LRN), which has been replaced by more effective methods like Batch Normalization.
 
-Because this architecture is no longer state-of-the-art and is primarily studied for its historical significance, I have trained it for only **30 epochs**.
+Because this architecture is no longer state-of-the-art and is primarily studied for its historical significance, I have trained it for only **50 epochs**.
 
 ---
 
