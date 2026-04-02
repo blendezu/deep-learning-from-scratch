@@ -1,29 +1,33 @@
-Generation 1 – Klassisch (Geschwindigkeit)
+# Object Tracking by Detection
 
-SORT (2016): Kalman-Filter für Bewegungsvorhersage + IoU-basierte Zuordnung via Hungarian Algorithm. ~260 FPS, kaum Re-ID.
-IoU Tracker (2017): Noch simpler – rein auf Box-Überlappung. Extrem schnell, versagt bei Okklusion.
-Centroid Tracker: Ordnet Tracks über euklidische Distanz der Mittelpunkte zu.
+This repository focuses on Object Tracking by Detection. The tracking algorithms can be categorized into five generations based on their evolution and focus areas:
 
-Generation 2 – Appearance / Re-ID
+## Generation 1 – Classic (Speed)
 
-DeepSORT (2017): Ergänzt SORT um ein CNN-Embedding für visuelle Ähnlichkeit, toleriert Okklusion deutlich besser.
-StrongSORT (2022): DeepSORT mit EMA-Embeddings (glattere Feature-Updates), OSNet Re-ID, AFLink-Nachbearbeitung.
-BoT-SORT (2022): Fügt Global Motion Compensation (GMC) hinzu – kompensiert Kamerabewegung vor dem Matching.
+* **SORT (2016)**: Uses a Kalman filter for motion prediction + IoU-based association via the Hungarian Algorithm. Very fast (~260 FPS), but barely any Re-ID capabilities.
+* **IoU Tracker (2017)**: Even simpler – purely based on bounding box overlap. Extremely fast but fails under occlusion.
+* **Centroid Tracker**: Associates tracks using the Euclidean distance between bounding box centers.
 
-Generation 3 – Hochperformant
+## Generation 2 – Appearance / Re-ID
 
-ByteTrack (2022): Kernidee – auch low-confidence Detektionen werden für Assoziierung genutzt, kein hartes Konfidenz-Cutoff. SOTA auf MOTChallenge.
-OC-SORT (2022): Observation-Centric, korrigiert Kalman-Drift bei Okklusion durch Re-Aktivierung aus echten Beobachtungen.
-MotionTrack (2023): Optimiert für schnelle, nicht-lineare Bewegungen.
+* **DeepSORT (2017)**: Extends SORT with a CNN embedding for visual similarity, making it tolerate occlusions much better.
+* **StrongSORT (2022)**: An upgrade to DeepSORT using EMA embeddings (for smoother feature updates), OSNet Re-ID, and AFLink post-processing.
+* **BoT-SORT (2022)**: Adds Global Motion Compensation (GMC), which compensates for camera motion before the matching step.
 
-Generation 4 – Transformer / End-to-End
+## Generation 3 – High Performance
 
-TrackFormer (2021): DETR-Basis, Detektion und Tracking in einem einzigen Netz.
-MOTR (2021): Track Queries propagieren über Frames – kein separates Re-ID nötig.
-MeMOT (2022): Langzeit-Memory-Mechanismus für wiederkehrende Objekte.
+* **ByteTrack (2022)**: Core idea – even low-confidence detections are used for association (no hard confidence cutoff). Reached SOTA on MOTChallenge.
+* **OC-SORT (2022)**: Observation-Centric SORT. Corrects Kalman drift during occlusions through reactivation based on real observations.
+* **MotionTrack (2023)**: Optimized for fast, non-linear movements.
 
-Generation 5 – Spezialisiert / Hybrid
+## Generation 4 – Transformer / End-to-End
 
-SparseTrack (2023): Pseudo-Depth-Karte für bessere Okklusions-Behandlung.
-Deep OC-SORT: OC-SORT mit Appearance-Kosten, hybride Assoziierung.
-Hybrid SORT (2023): Kombiniert IoU + Pose-Keypoints + Appearance-Features.
+* **TrackFormer (2021)**: DETR-based model; handles both detection and tracking in a single network.
+* **MOTR (2021)**: Track Queries propagate across frames, eliminating the need for a separate Re-ID model.
+* **MeMOT (2022)**: Features a long-term memory mechanism designed for recurring objects.
+
+## Generation 5 – Specialized / Hybrid
+
+* **SparseTrack (2023)**: Uses a pseudo-depth map for improved occlusion handling.
+* **Deep OC-SORT**: Combines OC-SORT with appearance costs for a hybrid association approach.
+* **Hybrid SORT (2023)**: Combines IoU, pose keypoints, and appearance features.
