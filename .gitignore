@@ -148,6 +148,9 @@ cython_debug/
 02_CNNs/06_ResNet/Data
 02_CNNs/06_ResNet/wandb
 
+02_CNNs/07_DenseNet/Data
+02_CNNs/07_DenseNet/wandb
+
 *.pth
 
 .DS_Store
