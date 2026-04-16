@@ -151,6 +151,9 @@ cython_debug/
 02_CNNs/07_DenseNet/Data
 02_CNNs/07_DenseNet/wandb
 
+02_CNNs/08_MobileNet/Data
+
+
 *.pth
 
 .DS_Store
