@@ -1,4 +1,4 @@
-# 01 — Vision Transformer (ViT)
+# 01 — Vision Transformer (ViT) - Original
 
 This module explores the **Vision Transformer (ViT)** architecture end-to-end, starting from building one from scratch, all the way through pre-training and fine-tuning on real-world datasets.
 
